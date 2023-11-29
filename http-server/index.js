@@ -3,15 +3,15 @@ const fs = require("fs")
 let homeContent = "";
 let projectContent = "";
 let registrationContent = "";
-const args = required("minimist")(process.argv);
+const args = require("minimist")(process.argv);
 const port=args.port
-fs.readFile("home.html",(err,home) => {
+fs.readFile("home.html", (err,home) => {
   if (err) {
     throw err;
   }
   homeContent=home;
 });
-fs.readFile("project.html",(err,project) => {
+fs.readFile("project.html", (err,project) => {
   if (err) {
     throw err;
   }
