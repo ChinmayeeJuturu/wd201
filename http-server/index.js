@@ -26,7 +26,7 @@ fs.readFile("registration.html",(err,registration) => {
 http
  .createServer((request,response) => {
    let url = request.url;
-   response.writeHead(200,{ " content-Type":"text/html"});
+   response.writeHead(200,{ "content-Type":"text/html"});
    switch (url) {
      case "/project":
        response.write(projectContent);
